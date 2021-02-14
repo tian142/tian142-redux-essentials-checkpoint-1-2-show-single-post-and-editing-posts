@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 export const SinglePost = ({ match }) => {
@@ -13,6 +13,7 @@ export const SinglePost = ({ match }) => {
     <div>
       <p>{post.title}</p>
       <p>{post.content}</p>
+      <Link to={`/edit/${post.id}`}>Edit Post</Link>
     </div>
   )
 }
